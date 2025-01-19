@@ -1,3 +1,276 @@
-h1 {
-  color: green;
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: rgb(10, 10, 26);
+}
+
+header {
+  text-align: center;
+}
+
+h1  {
+  font-family: "Sixtyfour Convergence", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0,
+    "XELA" 0,
+    "YELA" 0;
+  text-align: center;
+  font-size: 60px;
+}
+
+
+/* Form */
+
+.formContainer {
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.player2Checkbox label {
+  color: white;
+}
+
+.names {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.names input {
+  background: none;
+  font-size: 30px;
+  border: none;
+  outline: none;
+}
+
+input[name='player2ToPlay'] {
+  width: 16px;
+}
+
+#player1Name {
+  color: rgb(0, 110, 255);
+  border-bottom: 1px solid rgb(0, 110, 255);
+}
+
+#player2Name {
+  color: orange;
+  border-bottom: 1px solid orange;
+}
+
+label[for='player2ToPlay'] {
+  font-size: 20px;
+}
+
+.player2Checkbox,
+.submitNamesContainer {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  margin-top: 20px;
+  width: 200px;
+  font-size: 30px;
+  background: none;
+  color: white;
+  border: 5px solid white;
+  border-radius: 15px;
+}
+
+.orientation {
+  margin-top: 0;
+}
+
+button:hover {
+  color: red;
+  border: 5px solid red;
+}
+
+/* Boards */
+
+.player1Name {
+  color: rgb(0, 110, 255);
+  font-size: 30px;
+  text-align: center;
+}
+
+.player2Name {
+  color: orange;
+  font-size: 30px;
+  text-align: center;
+}
+
+.gameArea {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+
+.textArea {
+  /* margin-top: 20px; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  color: white;
+  font-size: 25px;
+}
+
+.player1Board,
+.player1BoardState,
+.player2Board,
+.player2BoardState {
+  display: grid;
+  grid-template-columns: repeat(10, 50px); 
+  grid-template-rows: repeat(10, 50px); 
+}
+
+.player1Area,
+.player2Area {
+  display: flex;
+  justify-content: center;
+  gap: 100px
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 2px solid gray;
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.miss {
+  color: white;
+}
+
+.hit {
+  color: red;
+}
+
+.ship div {
+  width: 50px;
+  height: 50px;
+  color: #ff4a96;
+}
+
+.player2Board .ship div {
+  color: #ff4800;
+}
+
+.shipyard {
+  margin-top: 150px;
+  width: 500px;
+  /* height: 500px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+
+.player1Area .ship {
+  background-color: blue;
+  opacity: 0.4; 
+  z-index: 1; 
+  display: inline-block;
+}
+
+.player2Area .ship {
+  background-color: orange;
+  opacity: 0.4; 
+  z-index: 1; 
+  display: inline-block;
+}
+
+#patrolBoat1.horizontal,
+#patrolBoat2.horizontal {
+  width: 100px;
+  height: 50px;
+}
+
+#destroyer1.horizontal,
+#destroyer2.horizontal {
+  width: 150px;
+  height: 50px;
+}
+
+#battleship1.horizontal,
+#battleship2.horizontal {
+  width: 200px;
+  height: 50px;
+}
+
+#carrier1.horizontal,
+#carrier2.horizontal {
+  width: 250px;
+  height: 50px;
+}
+
+#patrolBoat1.vertical,
+#patrolBoat2.vertical {
+  width: 50px;
+  height: 100px;
+}
+
+#destroyer1.vertical, 
+#destroyer2.vertical {
+  width: 50px;
+  height: 150px;
+}
+
+#battleship1.vertical,
+#battleship2.vertical {
+  width: 50px;
+  height: 200px;
+}
+
+#carrier1.vertical,
+#carrier2.vertical {
+  width: 50px;
+  height: 250px;
+}
+
+.moveAllowed {
+  background-color: green;
+}
+
+.moveNotAllowed {
+  background-color: red;
+}
+
+
+
+/* Gameboard */
+.playerNames,
+.gameboard,
+.row {
+  display: flex;
+}
+
+.playerNames,
+.gameboard {
+  justify-content: space-around;
+}
+
+.playerNames {
+  font-size: 50px;
 }
