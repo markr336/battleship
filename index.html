@@ -4,6 +4,69 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> Comment out when running webpack -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f544afeba4.js" crossorigin="anonymous"></script>
   <script defer src="main.js"></script></head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Battleship</h1>
+    </header>
+    <div class="formContainer">
+      <form class="form">
+        <div class="names">
+          <input type="text" name="player1Name" id="player1Name" placeholder="Player 1 Name">
+          <input type="text" name="player2Name" id="player2Name" placeholder="Player 2 Name">
+        </div>
+        <div class="player2Checkbox">
+          <label for="player2ToPlay">Two player game?</label>
+          <input type="checkbox" name="player2ToPlay" id="player2ToPlay">
+        </div>
+        <div class="submitNamesContainer">
+          <button type="submit" id="submitNames">Continue</button>
+        </div>
+      </form>
+    </div>
+    <div class="gameArea">
+      <div class="player1Area">
+        <div class="boards">
+          <p class="player1Name"></p>
+          <div class="player1Board"></div>
+          <div class="player1BoardState"></div>
+        </div>
+        <div class="shipyard">
+          <div id="patrolBoat1" class="ship horizontal" draggable="true"></div> 
+          <div id="destroyer1" class="ship horizontal" draggable="true" ></div>
+          <div id="battleship1" class="ship horizontal" draggable="true"></div> 
+          <div id="carrier1" class="ship horizontal" draggable="true"></div>
+          <div class="submitShipsContainer">
+            <button class="submitShips" id="submitPlayer1Ships">Play</button>
+          </div>
+        </div>
+      </div>
+      <div class="player2Area">
+        <div class="boards">
+          <p class="player2Name"></p>
+          <div class="player2Board"></div>
+          <div class="player2BoardState"></div>
+        </div>
+        <div class="shipyard">
+          <div id="patrolBoat2" class="ship horizontal" draggable="true"></div> 
+          <div id="destroyer2" class="ship horizontal" draggable="true" ></div>
+          <div id="battleship2" class="ship horizontal" draggable="true"></div> 
+          <div id="carrier2" class="ship horizontal" draggable="true"></div>
+          <div class="submitShipsContainer">
+            <button class="submitShips" id="submitPlayer2Ships">Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="textArea">
+      <p class="message">Ship Orientation: Horizontal</p>
+      <button class="orientation">Orientation</button>
+      <button class="nextPlayerTurn"></button>
+    </div>
+  </body>
 </html>
